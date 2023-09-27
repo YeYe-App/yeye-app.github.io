@@ -60,6 +60,7 @@
                 <ul class="header-main-nav">
                     <li class="current"><a class="smoothscroll" href="#home" title="intro">GİRİŞ</a></li>
                     <li><a class="smoothscroll" href="#about" title="about">HAKKINDA</a></li>
+                    <li><a class="smoothscroll" href="#stats" title="about">İSTATİSTİK</a></li>
                     <li><a class="smoothscroll" href="#download" title="download">İNDİR</a></li>
                     <li><a class="smoothscroll" href="#contact" title="contact">İLETİŞİM</a></li>
                 </ul>
@@ -209,6 +210,91 @@
 
     </section> <!-- end s-features -->
 
+    <!-- stats Section
+================================================= -->
+    <section id="stats" class="count-up target-section">
+        <!-- row -->
+        <div class="row">
+            <!-- twelve -->
+            <div class="col-twelve">
+                <div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
+                    <div class="bgrid stat">
+                        <div class="icon-part">
+                            <i class="icon-user"></i>
+                        </div>
+                        <h3 class="stat-count">
+                            0
+                        </h3>
+                        <h5 class="stat-title">
+                            Günlük Aktif<br>Kullanıcı Sayısı
+                        </h5>
+                    </div> <!-- /stat -->
+                    <div class="bgrid stat">
+                        <div class="icon-part">
+                            <i class="far fa-calendar-alt"></i>
+                        </div>
+                        <h3 class="stat-count">
+                            0
+                        </h3>
+                        <h5 class="stat-title">
+                            Haftalık Aktif<br>Kullanıcı Sayısı
+                    </div> <!-- /stat -->
+                    <div class="bgrid stat">
+                        <div class="icon-part">
+                            <i class="icon-calendar"></i>
+                        </div>
+                        <h3 class="stat-count">
+                            0
+                        </h3>
+                        <h5 class="stat-title">
+                            Aylık Aktif<br>Kullanıcı Sayısı
+                    </div> <!-- /stat -->
+                    <div class="bgrid stat">
+                        <div class="icon-part">
+                            <i class="icon-clock"></i>
+                        </div>
+                        <h3 class="stat-count">
+                            0
+                        </h3>
+                        <h5 class="stat-title">
+                            Ortalama<br>Oturum Süresi
+                        </h5>
+                    </div> <!-- /stat -->
+                    <div class="bgrid stat">
+                        <div class="icon-part">
+                            <i class="icon-bar-chart"></i>
+                        </div>
+                        <h3 class="stat-count">
+                            0
+                        </h3>
+                        <h5 class="stat-title">
+                            Haftalık<br>Kullanım Süresi
+                        </h5>
+                    </div> <!-- /stat -->
+                    <div class="bgrid stat">
+                        <div class="icon-part">
+                            <i class="icon-users"></i>
+                        </div>
+                        <h3 class="stat-count">
+                            0
+                        </h3>
+                        <h5 class="stat-title">
+                            Kullanıcı Sayısı<br>(Toplam)
+                        </h5>
+                    </div> <!-- /stat -->
+                </div> <!-- /stats-list -->
+            </div> <!-- /twelve -->
+        </div> <!-- /row -->
+        <script>
+            fetch('data.json')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data['user']['playcount'])
+                    document.querySelector("music").innerText = (data['user']['playcount'] * 5) - 75692
+                })
+        </script>
+    </section> <!-- /stats -->
+
 
     <!-- download
     ================================================== -->
@@ -224,7 +310,7 @@
                     olabilirsin.
                 </p>
                 <p style="font-style: italic;color: black;">
-                    Şu an için sadece Samsun Üniversitesi öğrencileri kullanabilmektedir.
+                    *Şu an için sadece Samsun Üniversitesi öğrencileri kullanabilmektedir.*
                 </p>
             </div>
         </div> <!-- end section-header -->
@@ -232,7 +318,7 @@
         <div class="row">
             <div class="col-full text-center">
                 <ul class="download-badges" data-aos="fade-up">
-                    <li><a href="#0" title="" class="badge-appstore">App Store</a></li>
+                    <li><a href="https://apps.apple.com/tr/app/yeye/id6467549574" target="_blank" title="" class="badge-appstore">App Store</a></li>
                     <li><a href="#0" title="" class="badge-googleplay">Google Play</a></li>
                 </ul>
             </div>
