@@ -3298,6 +3298,10 @@ html.no-csstransitions .home-content__main {
   background-image: url("../images/google-play.png");
 }
 
+.s-download .download-badges li a.badge-appgallery {
+  background-image: url("../images/app-gallery.png");
+}
+
 .s-download .download-bottom-image {
   margin-top: 11.2rem;
 }
